@@ -1,3 +1,5 @@
+import java.util.Date;
+
 import static  ui.UiMenu.*;
 
 public class Main {
@@ -16,8 +18,17 @@ public class Main {
 
         //showMenu();
         Doctor mydoctor=new Doctor("JHON PABON","PEDIATRA");
-        System.out.println(mydoctor.name);
-        System.out.println(mydoctor.especiality);
+        mydoctor.addAvailableAppointment(new Date(),"4pm");
+        mydoctor.addAvailableAppointment(new Date(),"12pm");
+        mydoctor.addAvailableAppointment(new Date(),"1pm");
+        System.out.println(mydoctor.getAvailableAppointments());
+
+        for (Doctor.AvailableAppointment aA:mydoctor.getAvailableAppointments()) {
+            System.out.println(aA.getDate()+" "+aA.getTime());
+        }
+
+        /**System.out.println(mydoctor.name);
+        System.out.println(mydoctor.especiality);*/
 
         Patient patient=new Patient("mafernanda","mafe@gmail.com");
         patient.setWeight(70);
