@@ -1,17 +1,30 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import static  ui.UiMenu.*;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+       /** Doctor myDoctor=new Doctor();
+        myDoctor.name="jhon jairo";
+        myDoctor.showName();
+        myDoctor.showId();
+        //System.out.println(Doctor.id);
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //Doctor.id++;
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        Doctor myDoctorAnn=new Doctor();
+        myDoctor.showId();
+        //System.out.println(Doctor.id);*/
+
+        //showMenu();
+        Doctor mydoctor=new Doctor("JHON PABON","PEDIATRA");
+        System.out.println(mydoctor.name);
+        System.out.println(mydoctor.especiality);
+
+        Patient patient=new Patient("mafernanda","mafe@gmail.com");
+        patient.setWeight(70);
+        patient.setPhoneNumber("12312311");
+        System.out.println(patient.getPhoneNumber());
+        System.out.println(patient.getName());
+        System.out.println(patient.getWeight());
     }
+
 }
