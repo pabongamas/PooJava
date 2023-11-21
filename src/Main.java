@@ -1,20 +1,21 @@
-import java.util.Date;
+import model.Doctor;
+import model.Patient;
 
-import static  ui.UiMenu.*;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-       /** Doctor myDoctor=new Doctor();
+       /** model.Doctor myDoctor=new model.Doctor();
         myDoctor.name="jhon jairo";
         myDoctor.showName();
         myDoctor.showId();
-        //System.out.println(Doctor.id);
+        //System.out.println(model.Doctor.id);
 
-        //Doctor.id++;
+        //model.Doctor.id++;
 
-        Doctor myDoctorAnn=new Doctor();
+        model.Doctor myDoctorAnn=new model.Doctor();
         myDoctor.showId();
-        //System.out.println(Doctor.id);*/
+        //System.out.println(model.Doctor.id);*/
 
         //showMenu();
         Doctor mydoctor=new Doctor("JHON PABON","pabongamamas@gmail.com");
@@ -23,7 +24,7 @@ public class Main {
         mydoctor.addAvailableAppointment(new Date(),"1pm");
         System.out.println(mydoctor.getAvailableAppointments());
         /*
-        for (Doctor.AvailableAppointment aA:mydoctor.getAvailableAppointments()) {
+        for (model.Doctor.AvailableAppointment aA:mydoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate()+" "+aA.getTime());
         }*/
         System.out.println(mydoctor);
