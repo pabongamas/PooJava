@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Patient extends  User{
    
     private String birthday;
@@ -7,7 +10,26 @@ public class Patient extends  User{
     private double height;
     private String blood;
 
+    private ArrayList<ApointmentDoctor> apointmentDoctors=new ArrayList<>();
+    private ArrayList<AppointmentNurse> appointmentNurses=new ArrayList<>();
 
+    public ArrayList<ApointmentDoctor> getApointmentDoctors() {
+        return apointmentDoctors;
+    }
+
+    public void addApointmentDoctors(Doctor doctor, Date date , String time) {
+        ApointmentDoctor apointmentDoctor=new ApointmentDoctor(this,doctor);
+        apointmentDoctor.schedule(date,time);
+        apointmentDoctors.add(apointmentDoctor);
+    }
+
+    public ArrayList<AppointmentNurse> getAppointmentNurses() {
+        return appointmentNurses;
+    }
+
+    public void setAppointmentNurses(ArrayList<AppointmentNurse> appointmentNurses) {
+        this.appointmentNurses = appointmentNurses;
+    }
 
     public String getBirthday() {
         return birthday;
